@@ -1,3 +1,5 @@
+module load gcc/4.9.2
+
 for schedule in static dynamic guided
 do
 	for chunks in 1 2 4 8 16 32 64 
