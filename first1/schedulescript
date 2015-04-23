@@ -1,0 +1,19 @@
+for schedule in static dynamic guided
+do
+	for chunks in 1 2 4 8 16 32 64 
+	do
+		sed s/"#####"/"$schedule,$chunks"/g <schedule.c > "$schedule"_"$chunks".c
+     		gcc -fopenmp "$schedule"_"$chunks".c -o "$schedule"_"$chunks" -lm -O3
+		
+     		./"$schedule"_"$chunks" 
+		
+	done
+done
+
+for schedule in auto static
+do 
+   sed s/"#####"/"$schedule"/g <firstmod.c > "$schedule".c
+   gcc -fopenmp "$schedule".c -o "$schedule" -lm -O3
+   ./"$schedule"
+done
+   

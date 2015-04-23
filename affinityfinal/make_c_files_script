@@ -1,0 +1,6 @@
+for threads in 1 2 3 6 12 24
+do
+     sed s/"#define N_Threads x"/"#define N_Threads $threads"/g <basecase.c >final_T"$threads".c
+     gcc -fopenmp final_T"$threads".c -o final_T"$threads" -lm -O3
+     ./final_T"$threads" 
+done

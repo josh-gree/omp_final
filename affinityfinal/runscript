@@ -1,0 +1,4 @@
+for threads in 1 2 3 6 12 24
+do
+    qsub -V -b y -cwd ./final_T"$threads"
+done

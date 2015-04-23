@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Openmp Schedules}{2}
+\contentsline {subsection}{\numberline {2.1}Data collection}{3}
+\contentsline {subsection}{\numberline {2.2}Loop 1}{4}
+\contentsline {subsection}{\numberline {2.3}Loop 2}{5}
+\contentsline {subsection}{\numberline {2.4}Variation of number of threads}{6}
+\contentsline {section}{\numberline {3}Affinity Schedule}{7}
+\contentsline {subsection}{\numberline {3.1}Distribution of chunks and creation of queues}{7}
+\contentsline {subsection}{\numberline {3.2}Processing of iterations}{8}
+\contentsline {subsection}{\numberline {3.3}Results}{9}

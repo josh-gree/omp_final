@@ -1,0 +1,6 @@
+for threads in 1 2 3 6 12 24
+do
+	sed s/"#####"/"$threads"/g <first_T.c > T_"$threads".c
+	gcc -fopenmp T_"$threads".c -o T_"$threads" -lm -O3
+	./T_"$threads"
+done
